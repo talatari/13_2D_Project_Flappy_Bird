@@ -29,7 +29,7 @@ namespace Scripts
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 _rigidbody.velocity = new Vector2(_speed, 0);
                 _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Force);
