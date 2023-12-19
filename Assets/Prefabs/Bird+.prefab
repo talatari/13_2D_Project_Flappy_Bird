@@ -117,8 +117,9 @@ GameObject:
   - component: {fileID: 8590156901294377444}
   - component: {fileID: 3001323683343521587}
   - component: {fileID: 3861429028688663739}
+  - component: {fileID: 6955065960282770249}
   - component: {fileID: 8899447519679951499}
-  - component: {fileID: 7857492133260450127}
+  - component: {fileID: 6946090233481213624}
   m_Layer: 0
   m_Name: Bird+
   m_TagString: Untagged
@@ -169,8 +170,20 @@ MonoBehaviour:
   _speed: 2
   _jumpForce: 250
   _rotationSpeed: 2
-  _minRotationZ: -60
+  _minRotationZ: -80
   _maxRotationZ: 60
+--- !u!114 &6955065960282770249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709385871354963906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e680eeb65792494a99297d66eeb9ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &8899447519679951499
 Rigidbody2D:
   serializedVersion: 4
@@ -198,7 +211,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &7857492133260450127
+--- !u!61 &6946090233481213624
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,7 +243,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.015}
+  m_Offset: {x: -0.04580003, y: 0.015266687}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -241,5 +254,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.6}
+  m_Size: {x: 0.6923175, y: 0.5889738}
   m_EdgeRadius: 0
