@@ -18,13 +18,12 @@ namespace Scripts
 
         private void Start()
         {
-            _startPosition = transform.position;
-            
             _rigidbody = GetComponent<Rigidbody2D>();
-            _rigidbody.velocity = Vector2.zero;
             
             _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
             _maxRotation = Quaternion.Euler(0, 0, _maxRotationZ);
+            
+            ResetBird();
         }
 
         private void Update()
@@ -40,7 +39,11 @@ namespace Scripts
             transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, Time.deltaTime * _rotationSpeed);
         }
 
-        public void Reset() => 
+        public void ResetBird()
+        {
             transform.position = _startPosition;
+            transform.rotation = Quaternion.identity;
+            _rigidbody.velocity = Vector2.zero;
+        }
     }
 }
