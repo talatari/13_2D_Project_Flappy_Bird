@@ -18,6 +18,5 @@ namespace Scripts
             Vector3 position = transform.position;
             transform.position = new Vector3(_bird.transform.position.x - _offsetX, position.y, position.z);
         }
-
     }
 }

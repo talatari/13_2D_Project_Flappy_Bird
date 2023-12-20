@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,7 +5,7 @@ namespace Scripts
 {
     public class TurbinesSpawner : TurbinesPool
     {
-        [SerializeField] private GameObject _template;
+        [SerializeField] private Turbine turbinePrefab;
         [SerializeField] private float _secondsBetweenSpawn;
         [SerializeField] private float _minSpawnPositionY;
         [SerializeField] private float _maxSpawnPositionY;
@@ -15,23 +14,27 @@ namespace Scripts
 
         private void Start()
         {
-            Init(_template);
+            Init(turbinePrefab);
+
+            _elapsedTime = _secondsBetweenSpawn;
         }
-        
+
         public void Update()
         {
             _elapsedTime += Time.deltaTime;
 
             if (_elapsedTime >= _secondsBetweenSpawn)
             {
-                if (TryGetObject(out GameObject obj))
+                if (TryGetTurbine(out Turbine turbine))
                 {
                     _elapsedTime = 0;
                     
                     float spawnPositionY = Random.Range(_minSpawnPositionY, _maxSpawnPositionY);
                     Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, transform.position.z);
-                    obj.SetActive(true);
-                    obj.transform.position = spawnPoint;
+                    turbine.gameObject.SetActive(true);
+                    turbine.transform.position = spawnPoint;
+                    
+                    DisableTurbinesAfterCamera();
                 }
             }
         }
