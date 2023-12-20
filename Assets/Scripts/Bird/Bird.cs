@@ -24,5 +24,10 @@ namespace Scripts
             print("Dead");
             Time.timeScale = 0;
         }
+
+        public void IncreaseScore()
+        {
+            _score++;
+        }
     }
 }
