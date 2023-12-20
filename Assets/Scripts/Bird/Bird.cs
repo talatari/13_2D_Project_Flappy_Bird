@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Scripts
@@ -8,26 +9,21 @@ namespace Scripts
         private BirdMover _mover;
         private int _score;
 
-        private void Start()
-        {
-            _mover = GetComponent<BirdMover>();
-        }
+        public event Action Dead;
 
-        public void ResetGame()
+        private void Start() => 
+            _mover = GetComponent<BirdMover>();
+
+        public void ResetParameters()
         {
             _score = 0;
-            _mover.ResetBird();
+            _mover.ResetPosition();
         }
 
-        public void Die()
-        {
-            ResetGame();
-            // Time.timeScale = 0;
-        }
+        public void Die() => 
+            Dead?.Invoke();
 
-        public void IncreaseScore()
-        {
+        public void IncreaseScore() => 
             _score++;
-        }
     }
 }

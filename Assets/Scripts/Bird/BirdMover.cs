@@ -23,7 +23,7 @@ namespace Scripts
             _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
             _maxRotation = Quaternion.Euler(0, 0, _maxRotationZ);
             
-            ResetBird();
+            ResetPosition();
         }
 
         private void Update()
@@ -39,7 +39,7 @@ namespace Scripts
             transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, Time.deltaTime * _rotationSpeed);
         }
 
-        public void ResetBird()
+        public void ResetPosition()
         {
             transform.position = _startPosition;
             transform.rotation = Quaternion.identity;
