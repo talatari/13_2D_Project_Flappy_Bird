@@ -2,8 +2,5 @@ using UnityEngine;
 
 namespace Scripts
 {
-    public class Turbines : MonoBehaviour
-    {
-        
-    }
+    public class Turbines : MonoBehaviour { }
 }
