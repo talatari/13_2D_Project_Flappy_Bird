@@ -10,32 +10,40 @@ namespace Scripts
         [SerializeField] private int _capacity;
         
         private Camera _camera;
-        private List<GameObject> _pool = new List<GameObject>();
+        private List<Turbine> _turbines = new ();
 
-        protected void Init(GameObject prefab)
+        protected void Init(Turbine turbinePrefab)
         {
             _camera = Camera.main;
 
             for (int i = 0; i < _capacity; i++)
             {
-                GameObject spawned = Instantiate(prefab, _container.transform);
-                spawned.SetActive(false);
+                Turbine spawned = Instantiate(turbinePrefab, _container.transform);
+                spawned.gameObject.SetActive(false);
                 
-                _pool.Add(spawned);
+                _turbines.Add(spawned);
             }
         }
 
-        protected bool TryGetObject(out GameObject result)
+        protected bool TryGetTurbine(out Turbine turbine) => 
+            (turbine = _turbines.FirstOrDefault(p => p.gameObject.activeSelf == false)) != null;
+
+        protected void DisableTurbinesAfterCamera()
         {
-            result = _pool.FirstOrDefault(p => p.activeSelf == false);
+            Vector3 disablePoint = _camera.ViewportToWorldPoint(new Vector3(0, 0.5f, 0));
             
-            return result != null;
+            foreach (Turbine turbine in _turbines)
+                if (turbine.gameObject.activeSelf)
+                {
+                    if (turbine.transform.position.x < disablePoint.x)
+                        turbine.gameObject.SetActive(false);
+                }
         }
 
         public void ResetPool()
         {
-            foreach (GameObject item in _pool)
-                item.SetActive(false);
+            foreach (Turbine turbine in _turbines)
+                turbine.gameObject.SetActive(false);
         }
     }
 }

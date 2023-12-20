@@ -21,8 +21,8 @@ namespace Scripts
 
         public void Die()
         {
-            print("Dead");
-            Time.timeScale = 0;
+            ResetGame();
+            // Time.timeScale = 0;
         }
 
         public void IncreaseScore()
