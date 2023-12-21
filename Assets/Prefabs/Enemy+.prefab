@@ -129,8 +129,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2283537278075205796}
+  - component: {fileID: 1507513523409767488}
   m_Layer: 0
-  m_Name: WarDrone
+  m_Name: Enemy+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +154,18 @@ Transform:
   - {fileID: 7867114435872762377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507513523409767488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580901136258047801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a954282e920954d00990cc66ab684f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9214774092781469653
 GameObject:
   m_ObjectHideFlags: 0
