@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Scripts
@@ -6,9 +5,21 @@ namespace Scripts
     public class GameCore : MonoBehaviour
     {
         [SerializeField] private Bird _bird;
-        [SerializeField] private EnemySpawner enemySpawner;
+        [SerializeField] private EnemySpawner _enemySpawner;
         [SerializeField] private GameStartScreen _gameStartScreen;
         [SerializeField] private GameOverScreen _gameOverScreen;
+
+        private void OnValidate()
+        {
+            if (_enemySpawner == null)
+                _enemySpawner = FindObjectOfType<EnemySpawner>();
+            
+            if (_gameStartScreen == null)
+                _gameStartScreen = FindObjectOfType<GameStartScreen>();
+            
+            if (_gameOverScreen == null)
+                _gameOverScreen = FindObjectOfType<GameOverScreen>();
+        }
 
         private void OnEnable()
         {
@@ -45,7 +56,7 @@ namespace Scripts
         private void OnRestartButtonClick()
         {
             _gameOverScreen.Close();
-            enemySpawner.ResetPool();
+            _enemySpawner.ResetPool();
             StartGame();
         }
 

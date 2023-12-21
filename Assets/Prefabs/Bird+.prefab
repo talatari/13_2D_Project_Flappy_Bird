@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  _jumpForce: 250
+  _jumpForce: 200
   _rotationSpeed: 2
   _minRotationZ: -80
   _maxRotationZ: 60
