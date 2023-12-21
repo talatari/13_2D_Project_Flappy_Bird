@@ -6,7 +6,7 @@ namespace Scripts
     public class GameCore : MonoBehaviour
     {
         [SerializeField] private Bird _bird;
-        [SerializeField] private TurbinesSpawner _turbinesSpawner;
+        [SerializeField] private EnemySpawner enemySpawner;
         [SerializeField] private GameStartScreen _gameStartScreen;
         [SerializeField] private GameOverScreen _gameOverScreen;
 
@@ -45,7 +45,7 @@ namespace Scripts
         private void OnRestartButtonClick()
         {
             _gameOverScreen.Close();
-            _turbinesSpawner.ResetPool();
+            enemySpawner.ResetPool();
             StartGame();
         }
 
