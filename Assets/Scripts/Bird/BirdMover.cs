@@ -36,6 +36,9 @@ namespace Scripts
                 transform.rotation = _maxRotation;
             }
             
+            if (transform.rotation.z > _maxRotation.z)
+                transform.rotation = _maxRotation;
+
             transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, Time.deltaTime * _rotationSpeed);
         }
 
