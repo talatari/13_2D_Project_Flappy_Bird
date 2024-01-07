@@ -21,7 +21,7 @@ namespace Scripts
         {
             _score = 0;
             ScoreChanged?.Invoke(_score);
-            
+
             _mover.ResetPosition();
         }
 
