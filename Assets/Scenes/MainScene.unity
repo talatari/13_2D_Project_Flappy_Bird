@@ -1338,10 +1338,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1898645161}
     m_Modifications:
-    - target: {fileID: 86504754201323113, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.16
-      objectReference: {fileID: 0}
     - target: {fileID: 5709385871354963906, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
       propertyPath: m_Name
       value: Bird+
@@ -1385,10 +1381,6 @@ PrefabInstance:
     - target: {fileID: 8590156901294377444, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8854967283477902960, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
-      propertyPath: m_Icon
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

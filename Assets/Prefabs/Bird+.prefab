@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9e9aca0cf73465f80b1dd1955c9b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _laserPrefab: {fileID: 784864534391540033, guid: 8d2d57746d370412ebee7d90ebcdc52d, type: 3}
+  _laserPrefab: {fileID: 7492708214942185101, guid: 8d2d57746d370412ebee7d90ebcdc52d, type: 3}
   _shootPosition: {fileID: 86504754201323113}
 --- !u!114 &3861429028688663739
 MonoBehaviour:
@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 8854967283477902960}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
