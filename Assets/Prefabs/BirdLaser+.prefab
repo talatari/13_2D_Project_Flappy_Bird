@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2853581118936688768}
   - component: {fileID: 346898372337189347}
   m_Layer: 0
-  m_Name: Laser+
+  m_Name: BirdLaser+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 3177354190197855781}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 0.082, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1802728649968160815}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181bfe4caabd146bda9d2c3b45162be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _direction: {x: 1, y: 0, z: 0}
 --- !u!212 &2853581118936688768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,10 +88,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 602e15edc27744a61861efdd5ffb9f86, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 0.21654598, g: 1, b: 0.2028302, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.2, y: 10.8}
@@ -131,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6388532, y: -0.07382312}
+  m_Offset: {x: 0.66901803, y: -0.07382312}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -142,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12782621, y: 0.20996542}
+  m_Size: {x: 0.063743114, y: 0.20996542}
   m_EdgeRadius: 0
 --- !u!1 &7528012653052170305
 GameObject:
@@ -216,10 +217,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 602e15edc27744a61861efdd5ffb9f86, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_Color: {r: 0.21960784, g: 1, b: 0.20392157, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.2, y: 10.8}

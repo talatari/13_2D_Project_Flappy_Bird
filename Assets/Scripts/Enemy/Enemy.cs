@@ -18,11 +18,16 @@ namespace Scripts
             if (_fireCoroutine != null)
                 StopCoroutine(_fireCoroutine);
         }
+        
+        public void Disable()
+        {
+            gameObject.SetActive(false);
+        }
 
         private IEnumerator Fire()
         {
-            float minDelay = 0.5f;
-            float maxDelay = 1.5f;
+            float minDelay = 1.5f;
+            float maxDelay = 2.5f;
             
             while (true)
             {

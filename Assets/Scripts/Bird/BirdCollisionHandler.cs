@@ -12,9 +12,9 @@ namespace Scripts
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out Laser laser))
-                _bird.Die();
-            
+            print("BirdCollisionHandler");
+            print($"other: {other.name}");
+
             if (other.TryGetComponent(out Enemy enemy))
                 _bird.Die();
             
