@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2283537278075205796}
   - component: {fileID: 1507513523409767488}
   - component: {fileID: 7153501085753281309}
+  - component: {fileID: 5360123635704867880}
   m_Layer: 0
   m_Name: Enemy+
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a954282e920954d00990cc66ab684f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _laserPrefab: {fileID: 784864534391540033, guid: 8193ef00580a9441c807221d63f2e811, type: 3}
+  _laserPrefab: {fileID: 8118883904707790489, guid: 8193ef00580a9441c807221d63f2e811, type: 3}
   _shootPosition: {fileID: 7867114435872762377}
 --- !u!60 &7153501085753281309
 PolygonCollider2D:
@@ -208,6 +209,33 @@ PolygonCollider2D:
       - {x: 0.5283465, y: -0.33965355}
       - {x: 0.53394675, y: -0.32118124}
   m_UseDelaunayMesh: 0
+--- !u!50 &5360123635704867880
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580901136258047801}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &9214774092781469653
 GameObject:
   m_ObjectHideFlags: 0

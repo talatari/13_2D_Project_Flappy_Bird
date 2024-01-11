@@ -1342,9 +1342,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.16
       objectReference: {fileID: 0}
+    - target: {fileID: 3001323683343521587, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
+      propertyPath: _laserPrefab
+      value: 
+      objectReference: {fileID: 7492708214942185101, guid: 8d2d57746d370412ebee7d90ebcdc52d, type: 3}
     - target: {fileID: 5709385871354963906, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
       propertyPath: m_Name
       value: Bird+
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946090233481213624, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8590156901294377444, guid: e2939a66ea7be43609ebd1683305a3f3, type: 3}
       propertyPath: m_LocalPosition.x
