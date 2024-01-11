@@ -6,6 +6,9 @@ namespace Scripts
     [RequireComponent(typeof(BirdMover))]
     public class Bird : MonoBehaviour
     {
+        [SerializeField] private Laser _laserPrefab;
+        [SerializeField] private Transform _shootPosition;
+        
         private BirdMover _mover;
         private int _score;
 
@@ -16,6 +19,12 @@ namespace Scripts
 
         private void Start() => 
             _mover = GetComponent<BirdMover>();
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+                Fire();
+        }
 
         public void ResetParameters()
         {
@@ -32,6 +41,11 @@ namespace Scripts
         {
             _score++;
             ScoreChanged?.Invoke(_score);
+        }
+
+        private void Fire()
+        {
+            Instantiate(_laserPrefab, _shootPosition);
         }
     }
 }
