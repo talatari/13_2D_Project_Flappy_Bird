@@ -12,11 +12,7 @@ namespace Scripts
         private void Start() => 
             Destroy(gameObject, _liveTime);
 
-        private void Update()
-        {
+        private void Update() => 
             transform.Translate(_direction * (_speed * Time.deltaTime), Space.World);
-            
-            print($"gameObject: {gameObject}, transform.position: {transform.position}");
-        }
     }
 }

@@ -4,7 +4,7 @@ namespace Scripts
 {
     public class BirdLaser : Laser
     {
-        [SerializeField] private Vector3 _direction = new Vector3();
+        [SerializeField] private Vector3 _direction;
         
         private void OnTriggerEnter2D(Collider2D other)
         {

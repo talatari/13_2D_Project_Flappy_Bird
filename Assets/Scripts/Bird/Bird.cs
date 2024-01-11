@@ -45,7 +45,8 @@ namespace Scripts
 
         private void Fire()
         {
-            Instantiate(_laserPrefab, _shootPosition);
+            Laser laser = Instantiate(_laserPrefab, _shootPosition.position, Quaternion.LookRotation(transform.rotation * Vector3.up));
+            laser.transform.parent = null;
         }
     }
 }
