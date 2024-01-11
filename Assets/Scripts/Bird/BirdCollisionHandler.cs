@@ -12,9 +12,13 @@ namespace Scripts
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out ScoreZone scoreZone))
-                _bird.IncreaseScore();
-            else
+            if (other.TryGetComponent(out Laser laser))
+                _bird.Die();
+            
+            if (other.TryGetComponent(out Enemy enemy))
+                _bird.Die();
+            
+            if (other.TryGetComponent(out Ground ground))
                 _bird.Die();
         }
     }
