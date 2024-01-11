@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4704832875865039303}
   - component: {fileID: 7945707589769702386}
-  - component: {fileID: 3033718494628153488}
   m_Layer: 0
   m_Name: WarDrone
   m_TagString: Untagged
@@ -85,41 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3033718494628153488
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058420307208957472}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: 0.05}
-  serializedVersion: 2
-  m_Radius: 0.7
 --- !u!1 &6580901136258047801
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2283537278075205796}
   - component: {fileID: 1507513523409767488}
+  - component: {fileID: 7153501085753281309}
   m_Layer: 0
   m_Name: Enemy+
   m_TagString: Untagged
@@ -168,6 +133,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _laserPrefab: {fileID: 784864534391540033, guid: 8193ef00580a9441c807221d63f2e811, type: 3}
   _shootPosition: {fileID: 7867114435872762377}
+--- !u!60 &7153501085753281309
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580901136258047801}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.2302264, y: -0.37504312}
+      - {x: 0.57209194, y: -0.15150192}
+      - {x: 0.5868645, y: 0.051432237}
+      - {x: 1.2718875, y: 0.24638501}
+      - {x: 1.2542568, y: 0.27626666}
+      - {x: 0.5665033, y: 0.14457929}
+      - {x: 0.4269557, y: 0.39174813}
+      - {x: 0.22123058, y: 0.43919533}
+      - {x: 0.076289706, y: 0.56652725}
+      - {x: -0.005090952, y: 0.57162416}
+      - {x: -0.15171173, y: 0.6739923}
+      - {x: -0.45791388, y: 0.63729584}
+      - {x: -0.43829682, y: 0.56489474}
+      - {x: -0.67151815, y: 0.4068461}
+      - {x: -0.795742, y: 0.3976282}
+      - {x: -0.8968266, y: 0.32414955}
+      - {x: -1.0644016, y: 0.309017}
+      - {x: -0.9958273, y: 0.13401365}
+      - {x: -1.1908802, y: 0.07468121}
+      - {x: -1.1791923, y: -0.21081379}
+      - {x: -1.1125565, y: -0.28348246}
+      - {x: -0.96575135, y: -0.24666959}
+      - {x: -0.8880271, y: -0.35366148}
+      - {x: -0.7301571, y: -0.51687896}
+      - {x: -0.39411876, y: -0.65530723}
+      - {x: -0.060349733, y: -0.6278919}
+      - {x: 0.21412177, y: -0.48711273}
+      - {x: 0.31575733, y: -0.5641917}
+      - {x: 0.5283465, y: -0.33965355}
+      - {x: 1.1868141, y: -0.45266145}
+  m_UseDelaunayMesh: 0
 --- !u!1 &9214774092781469653
 GameObject:
   m_ObjectHideFlags: 0
