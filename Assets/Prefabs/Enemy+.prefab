@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a954282e920954d00990cc66ab684f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _laserPrefab: {fileID: 8118883904707790489, guid: 8193ef00580a9441c807221d63f2e811, type: 3}
+  _enemyLaser: {fileID: 8118883904707790489, guid: 8193ef00580a9441c807221d63f2e811, type: 3}
   _shootPosition: {fileID: 7867114435872762377}
 --- !u!60 &7153501085753281309
 PolygonCollider2D:

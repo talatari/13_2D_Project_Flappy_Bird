@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9e9aca0cf73465f80b1dd1955c9b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _laserPrefab: {fileID: 7492708214942185101, guid: 8d2d57746d370412ebee7d90ebcdc52d, type: 3}
+  _birdLaser: {fileID: 7492708214942185101, guid: 8d2d57746d370412ebee7d90ebcdc52d, type: 3}
   _shootPosition: {fileID: 86504754201323113}
 --- !u!114 &3861429028688663739
 MonoBehaviour:
