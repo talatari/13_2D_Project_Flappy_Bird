@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Scripts
@@ -6,7 +7,7 @@ namespace Scripts
     [RequireComponent(typeof(BirdMover))]
     public class Bird : MonoBehaviour
     {
-        [SerializeField] private Laser _laserPrefab;
+        [SerializeField] private BirdLaser _birdLaser;
         [SerializeField] private Transform _shootPosition;
         
         private BirdMover _mover;
@@ -45,8 +46,10 @@ namespace Scripts
 
         private void Fire()
         {
-            Laser laser = Instantiate(_laserPrefab, _shootPosition.position, Quaternion.LookRotation(transform.rotation * Vector3.up));
-            laser.transform.parent = null;
+            BirdLaser birdLaser = Instantiate(_birdLaser, transform.position, Quaternion.identity);
+            birdLaser.Init(_shootPosition.position);
+            birdLaser.transform.parent = null;
+            birdLaser.transform.rotation = transform.rotation;
         }
     }
 }

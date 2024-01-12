@@ -5,7 +5,6 @@ namespace Scripts
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] private Laser _laserPrefab;
         [SerializeField] private Transform _shootPosition;
         
         private Coroutine _fireCoroutine;
@@ -34,7 +33,7 @@ namespace Scripts
                 float randomDelay = Random.Range(minDelay, maxDelay);
                 yield return new WaitForSeconds(randomDelay);
                 
-                Instantiate(_laserPrefab, _shootPosition);
+                
             }
         }
     }

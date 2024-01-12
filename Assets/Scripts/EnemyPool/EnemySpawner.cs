@@ -24,7 +24,6 @@ namespace Scripts
             _elapsedTime += Time.deltaTime;
 
             if (_elapsedTime >= _secondsBetweenSpawn)
-            {
                 if (TryGetEnemy(out Enemy enemy))
                 {
                     _elapsedTime = 0;
@@ -36,7 +35,6 @@ namespace Scripts
                     
                     DisableEnemyAfterCamera();
                 }
-            }
         }
     }
 }
