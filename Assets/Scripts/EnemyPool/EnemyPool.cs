@@ -34,10 +34,8 @@ namespace Scripts
             
             foreach (Enemy enemy in _enemies)
                 if (enemy.gameObject.activeSelf)
-                {
                     if (enemy.transform.position.x < disablePoint.x)
                         enemy.gameObject.SetActive(false);
-                }
         }
 
         public void ResetPool()
