@@ -47,7 +47,7 @@ namespace Scripts
         private void Fire()
         {
             BirdLaser birdLaser = Instantiate(_birdLaser, transform.position, Quaternion.identity);
-            birdLaser.Init(_shootPosition.position);
+            birdLaser.Init(_shootPosition.position, this);
             birdLaser.transform.parent = null;
             birdLaser.transform.rotation = transform.rotation;
         }

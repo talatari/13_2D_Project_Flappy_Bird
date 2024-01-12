@@ -5,6 +5,7 @@ namespace Scripts
 {
     public class Enemy : MonoBehaviour
     {
+        [SerializeField] private EnemyLaser _enemyLaser;
         [SerializeField] private Transform _shootPosition;
         
         private Coroutine _fireCoroutine;
@@ -25,15 +26,16 @@ namespace Scripts
 
         private IEnumerator Fire()
         {
-            float minDelay = 1.5f;
-            float maxDelay = 2.5f;
+            float minDelay = 0.5f;
+            float maxDelay = 2.0f;
             
             while (true)
             {
                 float randomDelay = Random.Range(minDelay, maxDelay);
                 yield return new WaitForSeconds(randomDelay);
-                
-                
+
+                EnemyLaser enemyLaser = Instantiate(_enemyLaser);
+                enemyLaser.SetStartPosition(_shootPosition.position);
             }
         }
     }
